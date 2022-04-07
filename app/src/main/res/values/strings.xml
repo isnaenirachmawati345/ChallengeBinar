@@ -20,7 +20,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="Already_have_an_account_Sign_In"><i> Already have an account?</i> <b>Sign In</b></string>
     <string name="welcome_customer_dcs_wash_laundry">Welcome Customer</string>
-    <string name="welcome_to_the_apps_dcs_wash_laundry"><b>Welcome Friend</b></string>
+    <string name="welcome_to_the_apps_dcs_wash_laundry"><b>Hallo, Welcome Friend</b></string>
     <string name="desc"><i> Hallo Para sahabat DSC laundry wash,silahkan klik tombol dibawah ini</i></string>
     <string name="next">Get Started</string>
     <string name="title_activity_add">activity_add</string>
@@ -33,4 +33,15 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="form">Silahkan Isi Data Anda</string>
     <string name="congratz_you_have_sign_up_successfully">Congratz !! You have sign up successfully.</string>
+    <string name="laundry_name">DCS LAUNDRY WASH</string>
+    <string name="welcome_customer">Welcome Customer</string>
+    <string name="logout">LogOut</string>
+    <string name="nama_pelanggan">Nama</string>
+    <string name="tanggal_pesanan">Tanggal</string>
+    <string name="alamat">Alamat</string>
+    <string name="jenis">Jenis</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="add_list">add_list</string>
+    <string name="update_jumlah">Update Data</string>
+    <string name="tanggal">Tanggal</string>
 </resources>

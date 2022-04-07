@@ -22,7 +22,7 @@
             android:name=".form_registrasi"
             android:exported="false" />
         <activity
-            android:name=".form_pengunjung"
+            android:name=".FragmentAddListData"
             android:exported="false"
             android:label="@string/title_activity_add"
             android:theme="@style/Theme.ChallengeBinar.NoActionBar" />
@@ -33,7 +33,7 @@
             android:name=".registrasi_one"
             android:exported="false" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.fragmen.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity

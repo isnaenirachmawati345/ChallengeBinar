@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/back_dialog.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/background.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/dialog_shape.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/ic_add.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/ic_baseline_key_24.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/drawable/title_add.xml" value="0.1" />
@@ -17,12 +19,20 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/activity_notification_registration.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/activity_registrasi_one.xml" value="0.15" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/content_activity_add.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/form_pengunjung.xml" value="0.22" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/form_pengunjung.xml" value="0.16" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragmen_add_list_data.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment__home__main.xml" value="0.21" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_activity_login.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_form_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_form_registrasi.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_list_data_pengunjung.xml" value="0.22" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_notif_regis_success.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_notification_regis.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_registrasi_one.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_second.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/ChallengeBinar/app/src/main/res/layout/fragment_update.xml" value="0.16" />
       </map>
     </option>
   </component>

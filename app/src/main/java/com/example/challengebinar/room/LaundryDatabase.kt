@@ -5,7 +5,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 abstract class LaundryDatabase : RoomDatabase () {
-    abstract fun laudryDao():LaundryDao
+    abstract fun laundryDao():LaundryDao
 
     companion object {
         private var INSTANCE : LaundryDatabase? = null
