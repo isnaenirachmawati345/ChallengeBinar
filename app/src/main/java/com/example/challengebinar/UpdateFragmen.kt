@@ -1,21 +1,21 @@
 package com.example.challengebinar
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import com.example.challengebinar.databinding.FragmentUpdateBinding
 import com.example.challengebinar.room.DatabaseStorange
 import com.example.challengebinar.room.Laundry
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
-import androidx.fragment.app.DialogFragment as DialogFragment1
 
 
-class UpdateFragmen() : DialogFragment1() {
+
+class UpdateFragmen() : DialogFragment() {
     private var _binding : FragmentUpdateBinding?=null
     private val binding get() = _binding!!
     lateinit var selectedlist : Laundry
@@ -28,7 +28,7 @@ class UpdateFragmen() : DialogFragment1() {
         savedInstanceState: Bundle?
     ): View? {
        dialog?.window?.setBackgroundDrawableResource(R.drawable.back_dialog)
-        dialog?.window?.attributes?.windowAnimations=R.style.DialogAnimation
+        dialog?.window?.attributes?.windowAnimations = R.style.DialogAnimation
         _binding= FragmentUpdateBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -50,9 +50,14 @@ class UpdateFragmen() : DialogFragment1() {
             binding.etAlamatUpdate.setText(selectedlist.address.toString())
             binding.etJenisUpdate.setText(selectedlist.jenis.toString())
             binding.etJumlahUpdate.setText(selectedlist.jumlah.toString())
-            binding.etTanggalUpdate.setText(selectedlist.date.toString())
+            binding.etTanggalUpdate.setText(selectedlist.date)
         }
         binding.btnUpdateBarang.setOnClickListener {
+            val name = binding.etNameUpdate.text.toString()
+            val alamat = binding.etAlamatUpdate.text.toString()
+            val jenis = binding.etJenisUpdate.text.toString()
+            val jumlah = binding.etJumlahUpdate.text.toString()
+            val tanggal = binding.etTanggalUpdate.text.toString()
             when {
                 binding.etAlamatUpdate.text.isNullOrEmpty()->{
                     binding.wrapTvAlamatUpdate.error = "Kamu perlu memasukan alamat kembali"
@@ -67,16 +72,12 @@ class UpdateFragmen() : DialogFragment1() {
                     binding.wrapTvTanggalUpdate.error="Kamu perlu memasukan tanggal pesanan kembali"
                 }
                 else -> {
-                    val alamat : String = binding.etAlamatUpdate.text.toString()
-                    val jenis : String = binding.etJenisUpdate.text.toString()
-                    val jumlah : Int = binding.etJumlahUpdate.text.toString().toInt()
-                    val tanggal : Int = binding.etTanggalUpdate.text.toString().toInt()
-
                     val itemObject = selectedlist
+                    itemObject.name = name
                     itemObject.address=alamat
                     itemObject.jenis=jenis
                     itemObject.jumlah = jumlah
-                    itemObject.date = tanggal.toString()
+                    itemObject.date = tanggal
 
                     GlobalScope.async {
                         val result = myDbUp?.laundryDao()?.updateLaundry(itemObject)
@@ -84,17 +85,11 @@ class UpdateFragmen() : DialogFragment1() {
                             if (result != 0){
                                 Toast.makeText(
                                     it.context,
-                                    "Alamat ${selectedlist.address} sukses diubah", Toast.LENGTH_SHORT,
-                                    "Jenis ${selectedlist.jenis} pesanan kamu sukses diubah", Toast.LENGTH_SHORT,
-                                    "Jumlah ${selectedlist.jumlah} pesanan kamu sukses diubah", Toast.LENGTH_SHORT,
-                                    "Tanggal ${selectedlist.date} pesanan kamu sukses diubah",Toast.LENGTH_SHORT
+                                    "sukses diubah", Toast.LENGTH_SHORT,
                                 ).show()
                             }else {
-                                Toast.makeText(it.context, "Data Gagal diubah", Toast.LENGTH_SHORT )
-                                    .show()
-
+                                Toast.makeText(it.context, "Data tidak berhasil diinputkan", Toast.LENGTH_SHORT).show()
                             }
-                            activity?.finish()
                         }
                     }
                     dialog?.dismiss()
@@ -102,8 +97,7 @@ class UpdateFragmen() : DialogFragment1() {
             }
         }
     }
-
-    override fun onDestroy() {
+    override fun onDestroy(){
         super.onDestroy()
         _binding=null
     }

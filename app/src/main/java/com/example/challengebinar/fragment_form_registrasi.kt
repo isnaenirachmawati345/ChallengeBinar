@@ -49,11 +49,10 @@ class fragment_form_registrasi : Fragment() {
                 binding.etKonfirmasiPassword.text.isNullOrEmpty() -> {
                     binding.wrapRegistrasiKonfrimPassword.error = "Kamu belum isi password konfirmasi"
                 }
-                binding.etKonfirmasiPassword.toString().lowercase() != binding.etKonfirmasiPassword.text.toString().lowercase() ->{
+                binding.etPasswordRegistrasi.text.toString() != binding.etKonfirmasiPassword.text.toString() ->{
                     binding.wrapRegistrasiKonfrimPassword.error ="Kamu memasukan password tidak sama"
                     binding.etKonfirmasiPassword.setText("")
-                }
-                else -> {
+                }else -> {
                     val objectUser = User (
                         null,
                         binding.etEmailRegistrasi.text.toString(),
@@ -77,10 +76,8 @@ class fragment_form_registrasi : Fragment() {
                     }
                 }
             }
-            binding.tvSignIn.setOnClickListener{
-                findNavController().navigate(R.id.action_fragment_form_registrasi_to_fragmentlogin)
+
             }
-        }
         }
     override fun onDestroy(){
         super.onDestroy()

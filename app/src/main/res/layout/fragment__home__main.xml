@@ -25,7 +25,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <TextView
-        android:id="@+id/tv_welcome"
+        android:id="@+id/tv_welcome_customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_customer"
@@ -51,8 +51,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
-        tools:listitem="@layout/fragment_list_data_pengunjung"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome_customer"
+        tools:listitem="@layout/fragment_list_data_pengunjung"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_new_item"
         android:layout_width="wrap_content"

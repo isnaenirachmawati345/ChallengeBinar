@@ -44,4 +44,5 @@
     <string name="add_list">add_list</string>
     <string name="update_jumlah">Update Data</string>
     <string name="tanggal">Tanggal</string>
+    <string name="password_konfirmasi">password konfirmasi</string>
 </resources>

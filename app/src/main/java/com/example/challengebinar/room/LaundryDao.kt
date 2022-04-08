@@ -1,12 +1,10 @@
 package com.example.challengebinar.room
 
 import android.provider.ContactsContract
-import androidx.room.Delete
-import androidx.room.Insert
+import androidx.room.*
 import androidx.room.OnConflictStrategy.REPLACE
-import androidx.room.Query
-import androidx.room.Update
 
+@Dao
 interface LaundryDao {
     @Query("SELECT * FROM user WHERE email = :email AND password = :password")
     fun logIn(email:String, password: Int): Boolean

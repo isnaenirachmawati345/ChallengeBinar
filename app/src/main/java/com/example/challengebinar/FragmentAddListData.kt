@@ -1,13 +1,10 @@
 package com.example.challengebinar
 
-import android.content.ClipData
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.example.challengebinar.databinding.FragmenAddListDataBinding
 import com.example.challengebinar.room.DatabaseStorange
@@ -42,6 +39,9 @@ class FragmentAddListData : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mYaFdB = DatabaseStorange.getInstance(requireContext())
+        binding.btnCancel.setOnClickListener {
+             dismiss()
+        }
         binding.btnTambah.setOnClickListener {
 
             when {
@@ -61,15 +61,12 @@ class FragmentAddListData : DialogFragment() {
                     binding.etAddFive.error = "Kamu perlu isi jenis"
                 }
                 else -> {
-                    val name: String = binding.tvNameAdd.text.toString()
-                    val alamat: String = binding.tvAlamatAdd.text.toString()
-                    val jumlah: Int = binding.tvJumlahAdd.text.toString().toInt()
-                    val tanggal: Int = binding.tvTanggalAdd.text.toString().toInt()
-                    val jenis: String = binding.tvJenisAdd.text.toString()
-                    val obejctListItem = Laundry(
-                        null, binding.tvNameAdd.text.toString(), name, alamat,
-                        jumlah.toString(), tanggal, jenis
-                    )
+                    val name = binding.tvNameAdd.text.toString()
+                    val alamat = binding.tvAlamatAdd.text.toString()
+                    val tanggal  = binding.tvTanggalAdd.text.toString()
+                    val jenis = binding.tvJenisAdd.text.toString()
+                    val jumlah  = binding.tvJumlahAdd.text.toString()
+                    val obejctListItem = Laundry (null,name,alamat,tanggal,jenis,jumlah)
                     GlobalScope.async {
                         val result = mYaFdB?.laundryDao()?.insertLaundry(obejctListItem)
                         runBlocking {

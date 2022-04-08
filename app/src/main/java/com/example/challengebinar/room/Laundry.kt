@@ -8,11 +8,11 @@ import kotlinx.android.parcel.Parcelize
 
 @Entity
 @Parcelize
-data class Laundry (
+data class Laundry(
      @PrimaryKey(autoGenerate = true) var id: Int?,
      @ColumnInfo (name = "name") var name: String,
      @ColumnInfo (name = "date") var date: String,
      @ColumnInfo (name = "address") var address: String,
      @ColumnInfo (name = "jenis") var jenis: String,
-     @ColumnInfo (name = "jumlah") var jumlah: Int,
+     @ColumnInfo (name = "jumlah") var jumlah: String,
 ) : Parcelable

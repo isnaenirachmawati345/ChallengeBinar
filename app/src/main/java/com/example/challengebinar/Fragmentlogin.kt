@@ -12,9 +12,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.challengebinar.databinding.FragmentLoginBinding
 import com.example.challengebinar.room.DatabaseStorange
-import com.example.challengebinar.room.LaundryDatabase
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_first.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -88,6 +86,7 @@ class Fragmentlogin : Fragment() {
                                    }
                                    snackbar.show()
                                }else{
+                                   findNavController().navigate(R.id.action_fragmentlogin_to_fragmen_Home_Main)
                                    val editShpre : SharedPreferences.Editor = preferences!!.edit()
                                    editShpre.putString(EMAIL,binding.etEmail.text.toString())
                                    editShpre.putString(PASSWORD, binding.passwordLogin.text.toString())

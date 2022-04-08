@@ -13,17 +13,24 @@
         tools:layout="@layout/fragment_login"
         >
         <action
-            android:id="@+id/action_fragmentlogin_to_fragmen_Home_Main"
-            app:destination="@id/fragmen_Home_Main" />
-        <action
             android:id="@+id/action_fragmentlogin_to_fragment_form_registrasi"
             app:destination="@id/fragment_form_registrasi" />
+        <action
+            android:id="@+id/action_fragmentlogin_to_fragmen_Home_Main"
+            app:destination="@id/fragmen_Home_Main" />
     </fragment>
     <fragment
         android:id="@+id/fragmen_Home_Main"
         android:name="com.example.challengebinar.Fragmen_Home_Main"
         android:label="fragment__home__main"
-        tools:layout="@layout/fragment__home__main" />
+        tools:layout="@layout/fragment__home__main" >
+        <action
+            android:id="@+id/action_fragmen_Home_Main_to_fragmentAddListData"
+            app:destination="@id/fragmentAddListData" />
+        <action
+            android:id="@+id/action_fragmen_Home_Main_to_fragmentlogin"
+            app:destination="@id/fragmentlogin" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_form_registrasi"
         android:name="com.example.challengebinar.fragment_form_registrasi"
@@ -33,5 +40,10 @@
             android:id="@+id/action_fragment_form_registrasi_to_fragmentlogin"
             app:destination="@id/fragmentlogin" />
     </fragment>
+    <dialog
+        android:id="@+id/fragmentAddListData"
+        android:name="com.example.challengebinar.FragmentAddListData"
+        android:label="fragmen_add_list_data"
+        tools:layout="@layout/fragmen_add_list_data" />
 
 </navigation>

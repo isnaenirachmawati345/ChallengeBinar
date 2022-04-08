@@ -9,7 +9,7 @@
     >
     <ImageView
         android:id="@+id/layer_login"
-        android:layout_width="293dp"
+        android:layout_width="290dp"
         android:layout_height="274dp"
         android:layout_margin="60dp"
         android:src="@drawable/photo_laundry"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/tv_login_1"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="19dp" />
+         />
     <TextView
         android:id="@+id/tv_login_1"
         android:layout_width="match_parent"

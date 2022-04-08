@@ -1,9 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    //bisa buat dipakai parcelize dan safeargs
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
-
 }
 
 android {
